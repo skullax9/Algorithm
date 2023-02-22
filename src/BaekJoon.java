@@ -6,6 +6,18 @@ class Main {
 	public static void main(String[] args) throws IOException {
 		FastReader fr = new FastReader();
 
+		String expression = "100-200*300-500+20";
+
+		int[] nums = Arrays.stream(expression.split("\\D")).mapToInt(Integer::parseInt).toArray();
+		String[] exp = expression.replaceAll("\\d","").split("");
+
+		for (int s : nums) {
+			System.out.println(s);
+		}
+
+		for (String s : exp) {
+			System.out.println(s);
+		}
 	}
 
 	public static int parse(String str) {
